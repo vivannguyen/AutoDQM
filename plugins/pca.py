@@ -61,7 +61,8 @@ def pca(histpair,
 
     
     # Get SSE cut
-    sse_cut = np.average(pca_pickle.__dict__['sse_cuts'][n_components])
+    #sse_cut = np.average(pca_pickle.__dict__['sse_cuts'][n_components])
+    sse_cut = pca_pickle.__dict__['sse_cut']
 
     is_outlier = is_good and bool(sse > sse_cut)
 
